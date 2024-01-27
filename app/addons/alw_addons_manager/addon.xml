@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>alw_addons_manager</id>
+    <version>1.0</version>
+    <priority>2000</priority>
+    <position>10</position>
+    <default_language>en</default_language>
+    <status>active</status>
+    <has_icon>Y</has_icon>
+    <authors>
+        <author>
+            <name>Alwong</name>
+            <email>Alwong@ya.ru</email>
+            <url>https://vk.com/alwong</url>
+        </author>
+    </authors>
+    <supplier>Alwong</supplier>
+    <supplier_link>https://vk.com/alwong</supplier_link>
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="licensekey">
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+</addon>
