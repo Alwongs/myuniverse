@@ -67,6 +67,7 @@ TODO
 /*.php
 #exceptions
 !admin.php
+!guess_what.php
 !config.php
 !api.php
 !index.php

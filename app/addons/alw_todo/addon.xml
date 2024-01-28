@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>alw_todo</id>
+    <version>1.0</version>
+    <priority>2200</priority>
+    <position>30</position>
+    <default_language>en</default_language>
+    <status>active</status>
+    <has_icon>Y</has_icon>
+    <authors>
+        <author>
+            <name>Alwong</name>
+            <email>Alwong@ya.ru</email>
+            <url>https://vk.com/alwong</url>
+        </author>
+    </authors>
+    <supplier>Alwong</supplier>
+    <supplier_link>https://vk.com/alwong</supplier_link>
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="licensekey">
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+    <queries>
+        <item>DROP TABLE IF EXISTS ?:alw_tasks;</item>
+        <item>
+            CREATE TABLE `?:alw_tasks` (
+                `task_id` mediumint unsigned NOT NULL AUTO_INCREMENT,
+                `task` varchar(255) NOT NULL,
+                `description` text,
+                `time_plan` varchar(25),
+                `time_fact` varchar(25),
+                `is_done` char(1) NOT NULL default 'N',
+                `user_id` bigint NOT NULL,
+                PRIMARY KEY (`task_id`)
+            ) Engine=MyISAM DEFAULT CHARSET UTF8;
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:alw_tasks;</item>
+    </queries>
+</addon>
