@@ -28,7 +28,7 @@
             </div>
 
             <div class="control-group {$no_hide_input_if_shared_product}">
-                <label for="product_description_product" class="control-label cm-required">{__("description")}</label>
+                <label for="product_description_product" class="control-label">{__("description")}</label>
                 <div class="controls">
                     <div class="input-group">
                         <input class="input-large"
@@ -43,10 +43,10 @@
             </div>
 
             <div class="control-group">
-                <label for="elm_banner_type" class="control-label cm-required">{__("alw_todo.time_plan")}</label>
+                <label for="elm_banner_type" class="control-label">{__("alw_todo.time_plan")}</label>
                 <div class="controls">
                     <div class="input-group">
-                        <input class="input-large"
+                        <input class="input-small"
                             form="form"
                             type="number"
                             name="task_data[time_plan]"
@@ -58,10 +58,10 @@
             </div>
 
             <div class="control-group">
-                <label for="elm_banner_type" class="control-label cm-required">{__("alw_todo.time_fact")}</label>
+                <label for="elm_banner_type" class="control-label">{__("alw_todo.time_fact")}</label>
                 <div class="controls">
                     <div class="input-group">
-                        <input class="input-large"
+                        <input class="input-small"
                             form="form"
                             type="number"
                             name="task_data[time_fact]"
@@ -74,9 +74,9 @@
 
 
             <div class="control-group">
-                <label for="elm_banner_type" class="control-label cm-required">{__("alw_todo.is_done")} {$event.is_done}</label>
+                <label for="elm_banner_type" class="control-label">{__("alw_todo.is_done")} {$event.is_done}</label>
                 <div class="controls">
-                <select name="task_data[is_done]" id="elm_banner_type">        
+                <select name="task_data[is_done]" id="elm_banner_type" class="input-small">        
                     <option {if $task.is_done == "N"}selected="selected"{/if} value="N">{__("no")}</option>
                     <option {if $task.is_done == "Y"}selected="selected"{/if} value="Y">{__("yes")}</option>
                 </select>
