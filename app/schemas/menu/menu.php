@@ -547,6 +547,10 @@ $schema = [
             ],
             'position' => 400,
         ],
+        'alw_addons_manager.my_addons' => [
+            'items' => [],
+            'position' => 600,            
+        ]
     ],
 ];
 

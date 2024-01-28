@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>alw_my_theme</id>
+    <version>1.0</version>
+    <priority>2100</priority>
+    <position>20</position>
+    <default_language>en</default_language>
+    <status>active</status>
+    <has_icon>Y</has_icon>
+    <authors>
+        <author>
+            <name>Alwong</name>
+            <email>Alwong@ya.ru</email>
+            <url>https://vk.com/alwong</url>
+        </author>
+    </authors>
+    <supplier>Alwong</supplier>
+    <supplier_link>https://vk.com/alwong</supplier_link>
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="licensekey">
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+    <!-- <queries>
+        <item>DROP TABLE IF EXISTS ?:alw_events;</item>
+        <item>
+            CREATE TABLE `?:alw_events` (
+                `event_id` mediumint unsigned NOT NULL AUTO_INCREMENT,
+                `event` varchar(255) NOT NULL,
+                `description` text,
+                `timestamp` varchar(255) NOT NULL,
+                `type` varchar(255) NOT NULL,
+                `user_id` bigint NOT NULL,
+                PRIMARY KEY (`event_id`)
+            ) Engine=MyISAM DEFAULT CHARSET UTF8;
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:alw_events;</item>
+    </queries> -->
+</addon>
