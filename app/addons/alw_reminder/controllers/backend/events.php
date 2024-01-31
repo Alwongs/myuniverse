@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($mode === 'update') {
 
         if (empty($_REQUEST['event_data']['event'])) {
-            fn_set_notification('E', __('error'), __('need_product_name'));
+            fn_set_notification('E', __('error'), __('need_event_name'));
             return [CONTROLLER_STATUS_REDIRECT, 'products.add'];
         }
 

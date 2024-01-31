@@ -28,7 +28,7 @@
             </div>
 
             <div class="control-group {$no_hide_input_if_shared_product}">
-                <label for="product_description_product" class="control-label cm-required">{__("description")}</label>
+                <label for="product_description_product" class="control-label">{__("description")}</label>
                 <div class="controls">
                     <div class="input-group">
                         <input class="input-large"
@@ -43,7 +43,7 @@
             </div>
 
             <div class="control-group">
-                <label for="elm_banner_type" class="control-label cm-required">{__("type")} {$event.type}</label>
+                <label for="elm_banner_type" class="control-label cm-required">{__("type")}</label>
                 <div class="controls">
                 <select name="event_data[type]" id="elm_banner_type">
                     <option {if $event.type == "U"}selected="selected"{/if} value="U">{__("alw_reminder.unique")}</option>        
@@ -56,7 +56,12 @@
             <div class="control-group {$no_hide_input_if_shared_product}">
                 <label class="control-label cm-required">{__("alw_reminder.event_date")}</label>
                 <div class="controls">
-                    {include file="addons/alw_reminder/views/components/calendar.tpl" date_id="from_date_holder" date_name="event_data[date]" date_val=$event.timestamp}
+                    {include 
+                        file="common/calendar.tpl" 
+                        date_id="from_date_holder" 
+                        date_name="event_data[date]" 
+                        date_val=$event.timestamp
+                    }
                 </div>
             </div>
         </div>

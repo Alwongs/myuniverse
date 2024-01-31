@@ -26,7 +26,6 @@ function fn_alw_reminder_get_event_data($event_id) {
 
 function fn_alw_reminder_update_event($event_data, $event_id = 0)
 {
-
     $event_data['timestamp'] = fn_parse_date($event_data['date']);
     unset($event_data['date']);
     if (empty($event_id)) {
